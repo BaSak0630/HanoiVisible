@@ -44,6 +44,11 @@ public class HanoiPanel extends JPanel {
                     hanoiTower.move(beforeTmp);
                     hanoiMoveEvents.addFirst(eventTmp);
                     repaint();
+                    try {
+                        Thread.sleep(10);
+                    }catch(Exception ignored){
+
+                    }
 
                 }else {
                     JOptionPane.showMessageDialog(null, "next", "next",
@@ -63,6 +68,11 @@ public class HanoiPanel extends JPanel {
                     hanoiTower.move(eventTmp);
                     beforeHanoiMoveEvent.push(eventTmp);
                     repaint();
+                    try {
+                        Thread.sleep(100);
+                    }catch(Exception ignored){
+
+                    }
                 } else {
                     JOptionPane.showMessageDialog(null, "before", "before",
                             JOptionPane.PLAIN_MESSAGE);
@@ -181,5 +191,6 @@ public class HanoiPanel extends JPanel {
             g.fillRect(pollX3 -(blockwight/2),height -(blockDefaultSize*(numOfLeftBlock-i)),blockwight,blockDefaultSize);
         }
         System.out.println("right갯수"+ numOfLeftBlock);
+        System.out.println("");
     }
 }
