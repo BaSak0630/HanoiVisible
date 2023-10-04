@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="HanoiVisible:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/HanoiVisible_jar</output-path>
+    <root id="archive" name="HanoiVisible.jar">
+      <element id="module-output" name="HanoiVisible" />
+    </root>
+  </artifact>
+</component>

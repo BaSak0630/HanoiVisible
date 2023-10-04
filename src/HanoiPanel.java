@@ -7,7 +7,7 @@ public class HanoiPanel extends JPanel {
     public static LinkedList<HanoiMoveEvent> hanoiMoveEvents = new LinkedList<>();
     public static Stack<HanoiMoveEvent> beforeHanoiMoveEvent = new Stack<>();
     JLabel label1;
-    JTextField floorTextField;
+    JTextField floorTextField = new JTextField(2);
     JButton beforeBut;
     JButton startBut;
     JButton nextBut;
@@ -15,9 +15,7 @@ public class HanoiPanel extends JPanel {
     HanoiTower hanoiTower;
     public HanoiPanel() {
         setBackground(new Color(255,255,204));
-        this.add(label1= new JLabel("층수를 입력해수세요"));
-        floorTextField = new JTextField("                    ");
-        floorTextField.setSize(100,30);
+        this.add(label1= new JLabel(" 1~12 층수를 입력해수세요"));
         this.add(floorTextField);
         beforeBut = new JButton("Before");
         this.add(beforeBut);
@@ -111,10 +109,7 @@ public class HanoiPanel extends JPanel {
             repaint();
         });
         resetBut.addActionListener(e -> {
-            hanoiTower = null;
-            hanoiMoveEvents.clear();
-            beforeHanoiMoveEvent.clear();
-            repaint();
+          startBut.doClick();
         });
     }
 
