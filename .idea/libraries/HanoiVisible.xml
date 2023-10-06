@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="HanoiVisible">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/HanoiVisible_jar/HanoiVisible.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

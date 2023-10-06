@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.Stack;
@@ -21,5 +23,10 @@ public class HanoiFrame extends JFrame {
 
         hanoiPanel = new HanoiPanel();
         this.add(hanoiPanel);
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent event) {
+                System.exit(0);
+            }
+        });
     }
 }
