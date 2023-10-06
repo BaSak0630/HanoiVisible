@@ -25,6 +25,7 @@ public class HanoiFrame extends JFrame {
         this.add(hanoiPanel);
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent event) {
+                dispose();
                 System.exit(0);
             }
         });
